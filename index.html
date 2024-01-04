@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(27, 27, 23);
+        }
+        .par{
+            height: 300px;
+            width: 300px;
+            border: 1px solid;
+            margin: 200px auto;
+            background-color: cadetblue;
+            border-radius: 20px;
+        }
+        button{
+            height: 60px;
+            width: 200px;
+            border: 1px solid;
+            border-radius: 10px;
+            margin: 70px auto;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+        #print{
+            height: 40px;
+            font-style: bold;
+            text-align: center;
+            width: 150px;
+            border: 1px solid;
+            border-radius: 10px;
+            margin: 50px  auto;
+            font-size: 30px;
+            border: hidden;
+            box-shadow: 0px 0px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="par">
+    <p id="print"></p>
+    <button onclick="ran()" class="but">Get OTP</button>
+    <script>
+        let ele=document.getElementById("print")
+        function ran() {
+            let random=Math.random()
+            ele.innerHTML=Math.round(random*1000000)    
+        }
+        ran();
+    </script>
+    </div>
+</body>
+</html>
